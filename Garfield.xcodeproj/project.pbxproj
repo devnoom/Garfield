@@ -9,19 +9,30 @@
 /* Begin PBXBuildFile section */
 		D07B09192BE3C8C9001ACDB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B09182BE3C8C9001ACDB2 /* AppDelegate.swift */; };
 		D07B091B2BE3C8C9001ACDB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B091A2BE3C8C9001ACDB2 /* SceneDelegate.swift */; };
-		D07B091D2BE3C8C9001ACDB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B091C2BE3C8C9001ACDB2 /* ViewController.swift */; };
 		D07B09222BE3C8CA001ACDB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07B09212BE3C8CA001ACDB2 /* Assets.xcassets */; };
 		D07B09252BE3C8CA001ACDB2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D07B09242BE3C8CA001ACDB2 /* Base */; };
+		D07B092F2BE3D9C3001ACDB2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = D07B092E2BE3D9C3001ACDB2 /* Networking */; };
+		D07B09352BE3E304001ACDB2 /* CatFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B09342BE3E304001ACDB2 /* CatFactsViewController.swift */; };
+		D07B09372BE3E35E001ACDB2 /* CatFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B09362BE3E35E001ACDB2 /* CatFactsViewModel.swift */; };
+		D07B093B2BE3E994001ACDB2 /* FactsModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B093A2BE3E994001ACDB2 /* FactsModal.swift */; };
+		D07B093E2BE3F2FC001ACDB2 /* CatFactsViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B093D2BE3F2FC001ACDB2 /* CatFactsViewTableViewCell.swift */; };
+		D07B09402BE3F31A001ACDB2 /* FactsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B093F2BE3F31A001ACDB2 /* FactsTableViewCellViewModel.swift */; };
+		D07B09432BE4375C001ACDB2 /* FactsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B09422BE4375C001ACDB2 /* FactsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D07B09152BE3C8C9001ACDB2 /* Garfield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garfield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07B09182BE3C8C9001ACDB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07B091A2BE3C8C9001ACDB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D07B091C2BE3C8C9001ACDB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D07B09212BE3C8CA001ACDB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D07B09242BE3C8CA001ACDB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D07B09262BE3C8CA001ACDB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07B09342BE3E304001ACDB2 /* CatFactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsViewController.swift; sourceTree = "<group>"; };
+		D07B09362BE3E35E001ACDB2 /* CatFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsViewModel.swift; sourceTree = "<group>"; };
+		D07B093A2BE3E994001ACDB2 /* FactsModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsModal.swift; sourceTree = "<group>"; };
+		D07B093D2BE3F2FC001ACDB2 /* CatFactsViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsViewTableViewCell.swift; sourceTree = "<group>"; };
+		D07B093F2BE3F31A001ACDB2 /* FactsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		D07B09422BE4375C001ACDB2 /* FactsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07B092F2BE3D9C3001ACDB2 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +66,83 @@
 		D07B09172BE3C8C9001ACDB2 /* Garfield */ = {
 			isa = PBXGroup;
 			children = (
-				D07B09182BE3C8C9001ACDB2 /* AppDelegate.swift */,
-				D07B091A2BE3C8C9001ACDB2 /* SceneDelegate.swift */,
-				D07B091C2BE3C8C9001ACDB2 /* ViewController.swift */,
-				D07B09212BE3C8CA001ACDB2 /* Assets.xcassets */,
-				D07B09232BE3C8CA001ACDB2 /* LaunchScreen.storyboard */,
+				D07B093C2BE3F2B4001ACDB2 /* Cell */,
+				D07B09382BE3E399001ACDB2 /* App */,
+				D07B09312BE3E27C001ACDB2 /* Support */,
+				D07B09322BE3E28F001ACDB2 /* Resources */,
+				D07B09302BE3E272001ACDB2 /* Scenes */,
 				D07B09262BE3C8CA001ACDB2 /* Info.plist */,
+				D07B09392BE3E987001ACDB2 /* Modal */,
 			);
 			path = Garfield;
+			sourceTree = "<group>";
+		};
+		D07B09302BE3E272001ACDB2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D07B09332BE3E2D0001ACDB2 /* Main Page */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		D07B09312BE3E27C001ACDB2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D07B09232BE3C8CA001ACDB2 /* LaunchScreen.storyboard */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		D07B09322BE3E28F001ACDB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D07B09212BE3C8CA001ACDB2 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D07B09332BE3E2D0001ACDB2 /* Main Page */ = {
+			isa = PBXGroup;
+			children = (
+				D07B09342BE3E304001ACDB2 /* CatFactsViewController.swift */,
+				D07B09362BE3E35E001ACDB2 /* CatFactsViewModel.swift */,
+				D07B09412BE43749001ACDB2 /* FactsMainPageExtension */,
+			);
+			name = "Main Page";
+			sourceTree = "<group>";
+		};
+		D07B09382BE3E399001ACDB2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D07B091A2BE3C8C9001ACDB2 /* SceneDelegate.swift */,
+				D07B09182BE3C8C9001ACDB2 /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		D07B09392BE3E987001ACDB2 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				D07B093A2BE3E994001ACDB2 /* FactsModal.swift */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		D07B093C2BE3F2B4001ACDB2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D07B093D2BE3F2FC001ACDB2 /* CatFactsViewTableViewCell.swift */,
+				D07B093F2BE3F31A001ACDB2 /* FactsTableViewCellViewModel.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		D07B09412BE43749001ACDB2 /* FactsMainPageExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D07B09422BE4375C001ACDB2 /* FactsExtension.swift */,
+			);
+			name = FactsMainPageExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +161,9 @@
 			dependencies = (
 			);
 			name = Garfield;
+			packageProductDependencies = (
+				D07B092E2BE3D9C3001ACDB2 /* Networking */,
+			);
 			productName = Garfield;
 			productReference = D07B09152BE3C8C9001ACDB2 /* Garfield.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +192,9 @@
 				Base,
 			);
 			mainGroup = D07B090C2BE3C8C9001ACDB2;
+			packageReferences = (
+				D07B092D2BE3D9C3001ACDB2 /* XCRemoteSwiftPackageReference "Networking" */,
+			);
 			productRefGroup = D07B09162BE3C8C9001ACDB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,9 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D07B091D2BE3C8C9001ACDB2 /* ViewController.swift in Sources */,
+				D07B09352BE3E304001ACDB2 /* CatFactsViewController.swift in Sources */,
+				D07B09402BE3F31A001ACDB2 /* FactsTableViewCellViewModel.swift in Sources */,
+				D07B093E2BE3F2FC001ACDB2 /* CatFactsViewTableViewCell.swift in Sources */,
 				D07B09192BE3C8C9001ACDB2 /* AppDelegate.swift in Sources */,
 				D07B091B2BE3C8C9001ACDB2 /* SceneDelegate.swift in Sources */,
+				D07B09432BE4375C001ACDB2 /* FactsExtension.swift in Sources */,
+				D07B09372BE3E35E001ACDB2 /* CatFactsViewModel.swift in Sources */,
+				D07B093B2BE3E994001ACDB2 /* FactsModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D07B092D2BE3D9C3001ACDB2 /* XCRemoteSwiftPackageReference "Networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devnoom/Networking.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D07B092E2BE3D9C3001ACDB2 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D07B092D2BE3D9C3001ACDB2 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D07B090D2BE3C8C9001ACDB2 /* Project object */;
 }

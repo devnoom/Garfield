@@ -1,0 +1,15 @@
+{
+  "originHash" : "02df954cb8787c634bacd91cb61acf3802cb386f41b562c3552f2af4eb9b6a92",
+  "pins" : [
+    {
+      "identity" : "networking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devnoom/Networking.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "95ef4ec54fa12afaa667a0eeeb507d64183fc1e2"
+      }
+    }
+  ],
+  "version" : 3
+}
