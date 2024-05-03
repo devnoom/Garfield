@@ -6,12 +6,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = CatFactsViewController()
-        window?.makeKeyAndVisible()
         
+        guard let scene = (scene as? UIWindowScene) else { return }
+        
+        let catsVC = CatFactsViewController()
+        let navigationController = UINavigationController(rootViewController: catsVC)
+        navigationController.navigationBar.prefersLargeTitles = true
+        let window = UIWindow(windowScene: scene)
+        window.rootViewController = navigationController
+        self.window = window
+        window.makeKeyAndVisible()
     }
-    
     
 }

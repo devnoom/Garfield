@@ -14,30 +14,20 @@ extension CatFactsViewController: UITableViewDelegate {
     }
 }
 
-// Assume you have a custom UITableViewCell subclass named FactTableViewCell
 
 extension CatFactsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.factsArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FactsTableViewCellViewModel
-        let fact = viewModel.factsArray[indexPath.row]
+            viewModel.factsArray.count
+        }
         
-        cell.factText.text!= fact.fact
-        
-        return cell
-    }
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CatFactsViewTableViewCell
+            let fact = viewModel.factsArray[indexPath.row]
+            
+            cell.facts.text = fact.fact
+            
+            return cell
+        }
 }
 
-extension UIView {
-    func pin(to superView: UIView) {
-        translatesAutoresizingMaskIntoConstraints                              = false
-        topAnchor.constraint(equalTo: superView.topAnchor).isActive            = true
-        leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive    = true
-        trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive  = true
-        bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive      = true
-    }
-}
 

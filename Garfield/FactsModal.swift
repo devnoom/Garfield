@@ -7,16 +7,14 @@
 
 import Foundation
 
-// Model representing a single fact
 struct Facts: Codable {
     let fact: String
     let length: Int
 }
 
-// Model representing the entire JSON response
 struct FactsResponse: Codable {
     let currentPage: Int
-    let data: Facts
+    let data: [Facts]
     let firstPageURL: String
     let from: Int
     let lastPage: Int
@@ -46,7 +44,6 @@ struct FactsResponse: Codable {
     }
 }
 
-// Model representing links in the response
 struct Link: Codable {
     let url: String?
     let label: String

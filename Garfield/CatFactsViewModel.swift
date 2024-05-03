@@ -11,7 +11,6 @@ import Networking
 class CatFactsViewModel {
     
     // MARK: - Properties
-    let urlString = "https://catfact.ninja/facts"
     var factsArray: [Facts] = [] {
         didSet { onFactsUpdated?() }
     }
@@ -22,16 +21,18 @@ class CatFactsViewModel {
         getData()
     }
     
-    private func getData() {
-        NetworkService().getData(urlString: urlString) { (result: Result<[Facts], Error>) in
+    func getData() {
+        let url = URL(string: "https://catfact.ninja/facts")!
+        NetworkingService.shared.fetchData(from: url) { [weak self] (result: Result<FactsResponse, Error>) in
             switch result {
-            case .success(let success):
-                self.factsArray = success
-            case .failure(let failure):
-                //ერორის პრინტვა
-                print(failure.localizedDescription)
+            case .success(let response):
+                self?.factsArray = response.data
+                self?.onFactsUpdated?()
+            case .failure(let error):
+                print("Error fetching facts:", error)
             }
         }
     }
+
 }
 

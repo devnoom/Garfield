@@ -9,47 +9,32 @@
 import UIKit
 
 class CatFactsViewTableViewCell: UITableViewCell {
+    // MARK: - UI Components
+    let facts = UILabel()
     
-    static let identifier = "CatFactsViewTableViewCell"
-   
-    public var eachFact = UITextView()
-    
+    // MARK: - LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setCellUI()
-        
+        setupUI()
     }
-    
-
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-   func setCellUI() {
-       addSubview(eachFact)
-       
-       self.contentView.layer.borderWidth = 2
-       self.contentView.layer.borderColor = UIColor.gray.cgColor
-       self.contentView.layer.cornerRadius = 20
-       self.contentView.layer.masksToBounds = true
-       
-       eachFact.translatesAutoresizingMaskIntoConstraints = false
-       
-       NSLayoutConstraint.activate([
-        eachFact.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-        eachFact.centerYAnchor.constraint(equalTo: centerYAnchor),
-        eachFact.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-        eachFact.centerYAnchor.constraint(equalTo: centerYAnchor),
-       ])
-       
-    }
-    // MARK: - Reload Data
-    func updateCell(with fact: FactsTableViewCellViewModel) {
-        eachFact.text = fact.factText
-        // Update any other UI elements with data from the fact object
+    // MARK: - UI Setup
+    private func setupUI() {
+        backgroundColor = .cyan
+        contentView.addSubview(facts)
+        facts.numberOfLines = 0
+        facts.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            facts.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            facts.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            facts.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            facts.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+        ])
     }
     
-    
-
 }
